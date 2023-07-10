@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfractionActivity">
+
+    <!--    <ImageButton-->
+<!--        android:id="@+id/enforcementButton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="152dp"-->
+<!--        android:layout_marginStart="89dp"-->
+<!--        android:layout_marginTop="68dp"-->
+<!--        android:layout_marginEnd="89dp"-->
+<!--        android:background="@drawable/card_background_gradient"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/enforcementcard"-->
+<!--        />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/maintenanceButton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="152dp"-->
+<!--        android:layout_marginStart="89dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:layout_marginEnd="89dp"-->
+<!--        android:background="@drawable/card_background_gradient"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/enforcementButton"-->
+<!--        app:srcCompat="@drawable/maintenancecard" />-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/enforcementButton"
+        android:layout_width="321dp"
+        android:layout_height="210dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_gradient"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/enforcementImg"
+                android:layout_width="124dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/enforcementcard" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/maintenanceButton"
+        android:layout_width="321dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enforcementButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_gradient"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/maintenanceImg"
+                android:layout_width="124dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/maintenancecard" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/towingButton"
+        android:layout_width="321dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="9dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maintenanceButton"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_gradient"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/towingImg"
+                android:layout_width="124dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/towingcard" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/header_background_gradient"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/gear"
+        app:title="Infraction"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+
+        >
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/headerLeft"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:srcCompat="@drawable/gear"-->
+        <!--            tools:layout_editor_absoluteX="19dp"-->
+        <!--            tools:layout_editor_absoluteY="13dp" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/headerTitle"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="TextView"-->
+        <!--            tools:layout_editor_absoluteX="126dp"-->
+        <!--            tools:layout_editor_absoluteY="13dp" />-->
+
+        <TextView
+            android:id="@+id/headerRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="20dp"
+            android:text="LOGOUT"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="370dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

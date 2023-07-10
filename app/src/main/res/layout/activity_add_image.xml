@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddImageActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/header_background_gradient"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/watchticketwhite"
+        app:title="Violation Committed"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:id="@+id/headerRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="20dp"
+            android:text="CANCEL"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="370dp"
+            tools:layout_editor_absoluteY="20dp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <GridView
+        android:id="@+id/imagesGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnWidth="115dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:paddingTop="70dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/addImageBtn"
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_margin="45dp"
+            android:src="@drawable/addimageblue" />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textColor="#FFFCFC" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
